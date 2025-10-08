@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  color: #333;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+input[type="number"] {
+  width: 220px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"]:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 4px 10px rgba(108, 99, 255, 0.2);
+}
+
+p#mensaje {
+  margin-top: 16px;
+  font-size: 1rem;
+  padding: 6px 14px;
+  border-radius: 6px;
+
+}
