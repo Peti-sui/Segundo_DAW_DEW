@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica;
+    background-color: #AAF0A3 ;
+    border: 4px solid #394338;
+    border-radius: 50%;
+    color: #ED28A2;
+    display: block ;
+    justify-content: center ;
+    align-items: center;
+    margin: 18%;
+    padding: 7%;
+    padding-left: 18%;
+    margin-left: 20%;
+    margin-top: 10%;
+
+}
+
+/*  TITULOS  */
+
+
+h4 {
+    margin-top: 3%;
+   color: #AD4987; 
+}
+
+h3{
+    margin-top: 7%;
+}
+
+/*  FORMULARIO  */
+
+
+input[type="number"] {
+    width: 69%;
+    height: 40px;
+    background-color: #eefdad;
+}
+
+input[type="number"]:focus {
+    background-color: #e2ff60;
+}
+
+input::placeholder{
+    font-size: 22px;
+color: #287FED;
+}
+
+#numeroInput {
+    color: #287FED;
+    font-size: 20px;   
+}
+
+/*  RESULTADOS  */
+#resultado-decenas {
+    font-size: 20px;
+    color: #ff0000;
+}
+
+#resultado-unidades {
+    color: #8228ED;
+    font-size: 20px;
+}
