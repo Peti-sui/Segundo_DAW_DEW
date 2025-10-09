@@ -1,0 +1,53 @@
+/* estilos basicos de la pagina */
+body {
+    font-family: sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* estilo del contenedor principal */
+.container {
+    margin-top: 40px;
+}
+
+/* campo de texto */
+input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+/* efecto al enfocar el input */
+input:focus {
+    border-color: #555;
+}
+
+/* boton principal */
+button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* efecto al pasar el mouse */
+button:hover {
+    background-color: #555;
+}
+
+/* resultado del mensaje encriptado */
+#resultado {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
