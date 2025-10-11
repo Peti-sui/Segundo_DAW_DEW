@@ -16,10 +16,10 @@ botonEnviar.addEventListener("click", function(event)  {
     const valor = Number(inputNumero.value);
 
         resultadin1 = factorialIterativo(valor);
-        resultado2 = factorialRecursivo(valor);
+        resultadin2 = factorialRecursivo(valor);
 
         resultado1.innerHTML = `Factorial (iterativo) de ${valor} : ${resultadin1}`;
-        resultado2.innerHTML = `El resultado iterativo es : ${resultadin2}`;
+        resultado2.innerHTML = `Factorial (recursivo) de ${valor} : ${resultadin2}`;
 
  
 });
@@ -43,7 +43,12 @@ let resultado = 1;
 
 
 
-function factorialRecursivo(){
+function factorialRecursivo(numero){
 
+    if (numero === 0 || numero === 1){
+        return 1;
+    }
+
+    return numero * factorialRecursivo(numero - 1);
 
 }

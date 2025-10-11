@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 31%;
+    margin-top: 17%;
+    font-family: Poppins, Inter;
+    font-size: 16px;
+    width: 400;
+   background-color: #f0f4f8 ; 
+   color: #1c1c1e;
+   line-height: 1.7;
+}
+
+#texto_numero {
+    width: 600;
+}
+
+#NumeroInput {
+    background-color: #3a86ff;
+    border-color: #00b894;
+    color: #ffffff;
+    border-width: 3px;
+}
+#NumeroInput::placeholder{
+    color: #ffffff;
+}
+
+#enviar {
+    width: 600;
+    background-color: #3a86ff ;
+    color: #ffffff;
+    border-color:#00b894 ;
+    border-width: 5px;
+
+}
+
+#enviar:hover{
+    background-color: #2667d0 ;
+
+}
+
+#resultado1 {
+    color: #00c853;
+}
+
+#resultado2 {
+    color: #00c853;
+}
