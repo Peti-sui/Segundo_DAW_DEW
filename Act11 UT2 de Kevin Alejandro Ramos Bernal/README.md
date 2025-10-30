@@ -1,4 +1,4 @@
-# 🧾 Formulario de Registro con Validación | Registration Form with Validation
+# Formulario de Registro con Validación | Registration Form with Validation
 
 ## 🇪🇸 Descripción
 Este programa muestra una página con un **formulario de registro de usuario**.  
