@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sources/styles/styles.css">
+    <title>Ejercicio 12</title>
+</head>
+<body>
+
+  <h2>Crear cuenta bancaria</h2>
+  <p>Rellena los datos del titular y pulsa <strong>Crear cuenta bancaria</strong>.</p>
+
+  <!-- Formulario: tiene id para que puedas manejarlo desde JavaScript -->
+  <form id="formCrearCuenta" aria-label="Formulario crear cuenta bancaria">
+    <label for="nombreTitular">Nombre del titular</label>
+    <input type="text" id="nombreTitular" name="nombreTitular" placeholder="Ej. Ana" required autocomplete="name">
+
+    <label for="apellidosTitular">Apellidos del titular</label>
+    <input type="text" id="apellidosTitular" name="apellidosTitular" placeholder="Ej. García López" required autocomplete="family-name">
+
+    <label for="saldoCuenta">Saldo inicial (€)</label>
+    <input type="number" id="saldoCuenta" name="saldoCuenta" placeholder="Ej. 500.00" step="0.01" min="0" required>
+
+    <button type="submit" id="btnCrearCuenta" class="btn">Crear cuenta bancaria</button>
+
+  </form>
+
+  <div id="resultado"></div>
+
+</body>
+<script src="./sources/app/app.js"></script>
+</html>
