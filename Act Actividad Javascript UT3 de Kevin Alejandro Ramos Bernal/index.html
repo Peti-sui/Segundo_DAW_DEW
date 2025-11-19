@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./sources/styles/styles.css">
+
+  </head>
+  <body>
+    <h1>Ejercicios Interactivos JS</h1>
+
+    <h2>1. Objeto Date</h2>
+    <button onclick="ejercicioFecha()">Calcular tiempo restante</button>
+    <div id="resultadoFecha"></div>
+
+    <h2>2. Objeto Math</h2>
+    <input id="radioInput" type="number" placeholder="Introduce radio" />
+    <button onclick="calcularArea()">Calcular area</button>
+    <div id="resultadoArea"></div>
+
+    <h2>3. Objeto Number</h2>
+    <button onclick="mostrarPi()">Mostrar PI</button>
+    <div id="resultadoPi"></div>
+
+    <h2>4. Objeto String</h2>
+    <input id="cadenaInput" type="text" placeholder="Introduce una cadena" />
+    <button onclick="procesarCadena()">Procesar</button>
+    <div id="resultadoCadena"></div>
+
+    <h2>5. Objeto Array</h2>
+    <button onclick="insertarFinal()">Insertar final</button>
+    <button onclick="insertarPrincipio()">Insertar inicio</button>
+    <button onclick="borrarPrimero()">Borrar primero</button>
+    <button onclick="borrarUltimo()">Borrar ultimo</button>
+    <button onclick="ordenarAsc()">Orden asc</button>
+    <button onclick="ordenarDesc()">Orden desc</button>
+
+    <div id="arrayMostrar"></div>
+  </body>
+  <script src="./sources/app/app.js"></script>
+</html>

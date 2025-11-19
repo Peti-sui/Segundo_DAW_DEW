@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: rgb(92, 162, 223);
+}
+
+h1, h2 {
+    font-weight: 600;
+}
+
+input {
+    padding: 5px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 6px 12px;
+    margin: 4px;
+    cursor: pointer;
+    border: 1px solid #444;
+    background: #f2f2f2;
+}
+
+button:hover {
+    background: #ddd;
+}
+
+div {
+    margin: 8px 0;
+}
