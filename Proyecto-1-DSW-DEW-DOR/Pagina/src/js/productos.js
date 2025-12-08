@@ -27,7 +27,7 @@ const productos = [
     new producto(1, "Exclusiva taza de la llamada Zona Gemelos", 18, "./src/IMG/llamada-gemelos.jpeg"),
     new producto(2, "Entretenimiento de evacuacion primal", 12, "./src/IMG/golf-caca.avif"),
     new producto(3, "Delantal de nuestro mini ser favorito", 15, "./src/IMG/delantal-bula.avif"),
-    new producto(4, "Gato lamiendo sus atributos", 4, "./src/IMG/gato-huevos.avif"),
+    new producto(4, "Gato lamiendo sus atributos apoteosicos", 4, "./src/IMG/gato-huevos.avif"),
     new producto(5, "Taza conmemorativa de Mike", 8, "./src/IMG/taza-llamada.avif")
 ];
 
@@ -42,12 +42,17 @@ function mostrarProductos(){
             const div = document.createElement("div");
             div.className = "Producto";
             div.innerHTML = `
-            <img src="${prod.img}" style="width:200px; height:auto; object-fit:cover;">
-            <h3>${prod.nombre}</h3>
-            <p>Precio: €${prod.precioFinal ? prod.precioFinal() : prod.precio}</p>
-            <button onclick="agregarCarrito(${prod.id})">Agregar al carrito</button>
-            <button onclick="agregarDeseos(${prod.id})">Anadir a la lista de deseos</button>
-            `;
+    <img src="${prod.img}" style="width:270px; height:250px; object-fit:cover;">
+    
+    <div class="contenido-producto">
+        <h3>${prod.nombre}</h3>
+        <p>Precio: €${prod.precioFinal ? prod.precioFinal() : prod.precio}</p>
+    </div>
+
+    <button class="btn-carrito" onclick="agregarCarrito(${prod.id})">Agregar al carrito</button>
+    <button class="btn-deseos" onclick="agregarDeseos(${prod.id})">Anadir a la lista de deseos</button>
+`;
+
             contenedor.appendChild(div);
         }
     );

@@ -37,10 +37,9 @@ function mostrarCarrito(){
     let html = "<h3>Carrito</h3><ul>";
     carrito.forEach((item, idx) => {
         html += `<li>
-            ${item.nombre} x 
-            <input type="number" min="1" value="${item.cantidad}" style="width:40px;" onchange="cambiarCantidad(${item.id}, this.value)">
-             = €${(item.precio * item.cantidad).toFixed(2)}
-            <button onclick="eliminarDelCarrito(${item.id})">Eliminar</button>
+            <snap class="produc">${item.nombre} x </snap>
+            <input class="input-cantidad" type="number" min="1" value="${item.cantidad}" style="width:40px;" onchange="cambiarCantidad(${item.id}, this.value)">
+            <button class="btn-mini" onclick="eliminarDelCarrito(${item.id})">Eliminar</button>
         </li>`;
         total += item.precio * item.cantidad;
         cantidadTotal += item.cantidad;
@@ -50,7 +49,7 @@ function mostrarCarrito(){
         <p>Total: €${total.toFixed(2)}</p>
         <form method="POST" action="checkout.php">
             <input type="hidden" name="carrito" value='${JSON.stringify(carrito).replace(/'/g, "")}'>
-            <button type="submit">Finalizar compra</button>
+            <button class="btn-comprar" type="submit">Finalizar compra</button>
         </form>
     `;
     contenedor.innerHTML = html;

@@ -36,20 +36,25 @@ $modo = $preferencias['modo'] ?? 'claro';
 <?php if (isset($_SESSION['usuario'])): ?>
     <?php if (!empty($_SESSION['esAdmin'])): ?>
         <div class="bienvenidaAdmin">
-            <strong>Bienvenido, Administrador 👑</strong>
+            <strong>Bienvenido, gran administrador todopoderoso de la historia 👑</strong>
         </div>
     <?php else: ?>
         <div class="bienvenidaUsuario">
             <strong>
-                Bienvenido/a, <?php echo htmlspecialchars($_SESSION['usuario']); ?> !
+                Bienvenid@, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!!! Disfruta del contenido en venta exclusivo para alternativos como tu!!!
             </strong>
         </div>
     <?php endif; ?>
 <?php endif; ?>
 
-<div class="muestraProductos"></div>
-<div class="resumenCarrito"></div>
-<div class="resumenDeseos"></div>
+<div class="layout-tienda">
+    <div class="muestraProductos"></div>
+
+    <aside class="panelLateral">
+        <div class="resumenCarrito"></div>
+        <div class="resumenDeseos"></div>
+    </aside>
+</div>
 
 <footer class="footer">
     <p>© 2025|26 Brain Stuff (Kevin Pesao - Scoo - Negro - Colombiano). Todos los derechos reservados.</p>

@@ -50,14 +50,14 @@ if(isset($_COOKIE['listaDeseos'])){
                 <?= htmlspecialchars($item['nombre']) ?> - €<?= number_format($item['precio'], 2) ?>
                 <form method="post" action="procesarDeseos.php" style="display:inline;">
                     <input type="hidden" name="id" value="<?= $item['id'] ?>">
-                    <button type="submit" name="accion" value="eliminar">Eliminar</button>
+                    <button class="btn-mini" type="submit" name="accion" value="eliminar">Eliminar</button>
                 </form>
             </li>
             <?php endforeach; ?>
         </ul>
         <p>Total: €<?= number_format($total, 2) ?></p>
         <form method="post" action="procesarDeseos.php">
-            <button type="submit" name="accion" value="vaciar">Vaciar Lista de Deseos</button>
+            <button class="vaciar-lista" type="submit" name="accion" value="vaciar">Vaciar Lista de Deseos</button>
         </form>
     <?php endif; ?>
 </main>

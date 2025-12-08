@@ -2,8 +2,18 @@
 /* Inicializa la sesion */
 session_start();
 
-/* Lee preferencias actuales */
-$modo = isset($_COOKIE['preferencias']) ? json_decode($_COOKIE['preferencias'], true)['modo'] ?? 'claro' : 'claro';
+/* Determina el modo a mostrar:
+   - Si viene por GET (después de procesarPreferencias), se usa eso
+   - Si no, se lee la cookie
+   - Por defecto, claro
+*/
+if(isset($_GET['modo'])){
+    $modo = $_GET['modo'];
+} elseif(isset($_COOKIE['preferencias'])) {
+    $modo = json_decode($_COOKIE['preferencias'], true)['modo'] ?? 'claro';
+} else {
+    $modo = 'claro';
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +23,7 @@ $modo = isset($_COOKIE['preferencias']) ? json_decode($_COOKIE['preferencias'], 
     <title>Preferencias - Brain Stuff</title>
     <link rel="stylesheet" href="./src/styles/paginaPrincipalEstilo.css">
 </head>
-<body class="<?= $modo ?>">
+<body class="<?= htmlspecialchars($modo) ?>">
 <div class="pagina">
 <header class="header">
     <a href="index.php"><img src="./src/IMG/Logo.png" alt="logo" style="width:90px;"></a>
@@ -27,6 +37,7 @@ $modo = isset($_COOKIE['preferencias']) ? json_decode($_COOKIE['preferencias'], 
         <?php endif; ?>
     </nav>
 </header>
+
 <main>
     <h2>Selecciona tus preferencias</h2>
     <form method="post" action="procesarPreferencias.php">
@@ -39,6 +50,7 @@ $modo = isset($_COOKIE['preferencias']) ? json_decode($_COOKIE['preferencias'], 
         <button type="submit">Guardar preferencias</button>
     </form>
 </main>
+
 <footer class="footer">
     <p>© 2025|26 Brain Stuff (Kevin Pesao - Scoo - Negro - Colombiano). Todos los derechos reservados.</p>
 </footer>

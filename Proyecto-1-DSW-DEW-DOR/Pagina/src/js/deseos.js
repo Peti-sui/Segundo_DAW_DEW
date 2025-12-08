@@ -47,6 +47,20 @@ function getListaDeseosFromCookie(){
     }
 }
 
+/* NUEVO → función para eliminar un ítem específico */
+window.eliminarDeseo = function(id){
+    const cookieNombre = "listaDeseos";
+    const lista = getListaDeseosFromCookie();
+    /* Filtra la lista quitando el producto con ese ID */
+    const nuevaLista = lista.filter(item => item.id !== id);
+    /* Actualiza cookie */
+    document.cookie = cookieNombre + "=" +
+        encodeURIComponent(JSON.stringify(nuevaLista)) +
+        "; path=/; max-age=" + (60*60*24*30);
+    /* Actualiza la vista */
+    mostrarResumenDeseos();
+};
+
 /* Genera o actualiza el resumen de deseos en el DOM */
 function mostrarResumenDeseos(){
     let cont = document.querySelector(".resumenDeseos");
@@ -69,11 +83,17 @@ function mostrarResumenDeseos(){
     let html = "<h4>Lista de Deseos</h4><ul>";
     lista.forEach(item => {
         total += Number(item.precio);
-        html += `<li>${item.nombre} - €${item.precio}</li>`;
+
+        /* NUEVO → botón de eliminar individual */
+        html += `
+            <li>
+               <snap class="produc"> ${item.nombre} - €${item.precio}</snap>
+                <button onclick="eliminarDeseo(${item.id})" class="btn-mini" style="margin-left:8px;">Eliminar</button>
+            </li>`;
     });
     /* Agrega informacion del total y formulario para vaciar la lista */
     html += `</ul><p>Total: €${total.toFixed(2)}</p>`;
-    html += `<form method="post" action="procesarDeseos.php"><button type="submit" name="accion" value="vaciar">Vaciar lista</button></form>`;
+    html += `<form method="post" action="procesarDeseos.php"><button class="vaciar-lista" type="submit" name="accion" value="vaciar">Vaciar lista</button></form>`;
     /* Muestra el contenido generado */
     cont.innerHTML = html;
 }

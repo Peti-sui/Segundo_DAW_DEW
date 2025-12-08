@@ -45,7 +45,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['carrito'])) {
     </nav>
 </header>
 <main>
-    <h2>Tu compra ha sido extremadamente exitosa!!</h2>
+<?php if (!isset($_SESSION['usuario'])): ?>
+    <h2>Debes iniciar sesión para ver tu compra.</h2>
+<?php else: ?>
+    <h2>Tu compra ha sido extremadamente exitosa!! --<strong>-- Felicidades <?= htmlspecialchars($_SESSION['usuario']); ?>!!!</strong></h2>
+    
     <?php if ($compraRealizada): ?>
         <p><strong>Fecha de compra:</strong> <?= htmlspecialchars($fecha) ?></p>
         <h3>Resumen de productos:</h3>
@@ -57,7 +61,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['carrito'])) {
     <?php else: ?>
         <p>No hay datos de compra para mostrar.</p>
     <?php endif; ?>
+<?php endif; ?>
 </main>
+
 <footer class="footer">
     <p>© 2025|26 Brain Stuff (Kevin Pesao - Scoo - Negro - Colombiano). Todos los derechos reservados.</p>
 </footer>
