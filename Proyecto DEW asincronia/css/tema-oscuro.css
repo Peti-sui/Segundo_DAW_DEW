@@ -1,0 +1,146 @@
+body.tema-oscuro {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.tema-oscuro h1,
+body.tema-oscuro h2,
+body.tema-oscuro h3,
+body.tema-oscuro th {
+    color: #ffffff;
+    border-bottom-color: #444;
+}
+
+body.tema-oscuro a {
+    color: #66b3ff;
+}
+
+body.tema-oscuro a:hover {
+    color: #3399ff;
+    text-decoration: underline;
+}
+
+body.tema-oscuro .nav-links a {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+}
+
+body.tema-oscuro .nav-links a:hover {
+    background-color: #66b3ff;
+    color: #121212;
+    border-color: #66b3ff;
+}
+
+body.tema-oscuro .producto,
+body.tema-oscuro .preferencias-container {
+    background-color: #1e1e1e;
+    border-color: #444;
+}
+
+body.tema-oscuro .producto:hover {
+    box-shadow: 0 8px 20px rgba(102, 179, 255, 0.15);
+}
+
+body.tema-oscuro input,
+body.tema-oscuro select,
+body.tema-oscuro textarea {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.tema-oscuro input:focus,
+body.tema-oscuro select:focus,
+body.tema-oscuro textarea:focus {
+    border-color: #66b3ff;
+    box-shadow: 0 0 0 3px rgba(102, 179, 255, 0.25);
+}
+
+body.tema-oscuro button {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+body.tema-oscuro button:hover {
+    background-color: #1976D2;
+}
+
+body.tema-oscuro table {
+    border-color: #444;
+}
+
+body.tema-oscuro tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+body.tema-oscuro tr:hover {
+    background-color: #2d2d2d;
+}
+
+body.tema-oscuro .info-box {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+body.tema-oscuro .admin-notice {
+    background-color: #664d03;
+    color: #ffda6a;
+    border-color: #856404;
+}
+
+body.tema-oscuro .error-message {
+    color: #f8d7da;
+    background-color: #721c24;
+    border-color: #f5c6cb;
+}
+
+body.tema-oscuro .success-message {
+    color: #d4edda;
+    background-color: #155724;
+    border-color: #c3e6cb;
+}
+
+body.tema-oscuro .carrito-acciones button {
+    background-color: #555;
+}
+
+body.tema-oscuro .carrito-acciones button:hover {
+    background-color: #666;
+}
+
+/* VARIABLES PARA EL CARRUSEL */
+:root {
+    --carousel-bg: #2d3748;
+    --carousel-border: #4a5568;
+    --carousel-title: #e2e8f0;
+    --carousel-btn-bg: #4a5568;
+    --carousel-btn-color: #63b3ed;
+    --carousel-btn-border: #63b3ed;
+    --carousel-btn-hover-bg: #63b3ed;
+    --carousel-btn-hover-color: #1a202c;
+    --carousel-btn-disabled: #718096;
+    --carousel-indicator: #718096;
+    --carousel-indicator-active: #63b3ed;
+    --carousel-slide-bg: #4a5568;
+    --carousel-slide-border: #2d3748;
+    --carousel-img-bg: #2d3748;
+    --carousel-placeholder-bg: #2d3748;
+    --carousel-placeholder-color: #718096;
+    --carousel-action-btn-bg: linear-gradient(135deg, #805ad5 0%, #3182ce 100%);
+    --carousel-carrito-hover: linear-gradient(135deg, #6b46c1 0%, #2c5282 100%);
+    --carousel-deseo-btn-bg: linear-gradient(135deg, #ed64a6 0%, #dd6b20 100%);
+    --carousel-deseo-hover: linear-gradient(135deg, #d53f8c 0%, #c05621 100%);
+}
+
+/* VARIABLES PARA VALORACIONES */
+:root {
+    --rating-bg: #2d3748;
+    --rating-border: #4a5568;
+    --rating-title: #a0aec0;
+    --star-inactive: #718096;
+    --star-hover: #ecc94b;
+    --star-active: #ecc94b;
+    --rating-average: #e2e8f0;
+    --rating-count: #a0aec0;
+}
