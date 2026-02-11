@@ -144,3 +144,21 @@ body.tema-oscuro .carrito-acciones button:hover {
     --rating-average: #e2e8f0;
     --rating-count: #a0aec0;
 }
+/* -------------------------------------------------------------------------- */
+/* VARIABLES DE GEOLOCALIZACION MADAGASCAR - TEMA OSCURO */
+/* -------------------------------------------------------------------------- */
+:root {
+    --madagascar-bg: linear-gradient(135deg, #1e272e 0%, #2d3436 100%);
+    --madagascar-border: #4a5568;
+    --madagascar-accent: #00cec9;
+    --madagascar-title: #00cec9;
+    --madagascar-card-bg: #2d3748;
+    --madagascar-card-border: #4a5568;
+    --madagascar-card-title: #00cec9;
+    --madagascar-text: #e2e8f0;
+    --madagascar-phone: #74b9ff;
+    --madagascar-email: #00cec9;
+    --madagascar-footer: #a0aec0;
+    --madagascar-popup-bg: #2d3748;
+    --madagascar-popup-text: #e2e8f0;
+}

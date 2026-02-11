@@ -150,3 +150,22 @@ body.tema-claro .success-message {
     --rating-average: #333;
     --rating-count: #666;
 }
+
+/* -------------------------------------------------------------------------- */
+/* VARIABLES DE GEOLOCALIZACION MADAGASCAR - TEMA CLARO */
+/* -------------------------------------------------------------------------- */
+:root {
+    --madagascar-bg: linear-gradient(135deg, #f6f9fc 0%, #e9f2f5 100%);
+    --madagascar-border: #c8e6e5;
+    --madagascar-accent: #00b894;
+    --madagascar-title: #00b894;
+    --madagascar-card-bg: white;
+    --madagascar-card-border: #d4edf0;
+    --madagascar-card-title: #00b894;
+    --madagascar-text: #2d3436;
+    --madagascar-phone: #0984e3;
+    --madagascar-email: #00b894;
+    --madagascar-footer: #636e72;
+    --madagascar-popup-bg: white;
+    --madagascar-popup-text: #2d3436;
+}

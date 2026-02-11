@@ -26,6 +26,9 @@ $tema = $_COOKIE['tema'] ?? 'claro';
     <title><?php echo __('tienda_titulo'); ?></title>
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/tema-<?php echo $tema; ?>.css">
+    
+    <!-- Leaflet CSS para el mapa de Madagascar -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body class="tema-<?php echo $tema; ?>">
@@ -53,7 +56,75 @@ $tema = $_COOKIE['tema'] ?? 'claro';
                 </ul>
             </div>
         </div>
+
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- SECCION DE GEOLOCALIZACION MADAGASCAR -->
+        <!-- Distribuidora oficial en Antananarivo capital de Madagascar -->
+        <!-- ---------------------------------------------------------------------- -->
+        <div class="madagascar-section mt-40">
+            <div class="madagascar-header">
+                <div class="madagascar-title-icon">𝜗𐙚</div>
+                <h2 class="madagascar-title">Nuestra Distribuidora en Madagascar</h2>
+            </div>
+            
+            <div class="madagascar-content">
+                <!-- Columna izquierda informacion de contacto y direccion -->
+                <div class="madagascar-info">
+                    <div class="madagascar-card">
+                        <div class="madagascar-card-icon">𝜗</div>
+                        <h3>Direccion</h3>
+                        <p>Antananarivo, Madagascar</p>
+                        <p class="madagascar-detalle">Distrito Comercial Analakely</p>
+                        <p class="madagascar-detalle">Av. de la Independencia, 45</p>
+                    </div>
+                    
+                    <div class="madagascar-card">
+                        <div class="madagascar-card-icon">𐙚</div>
+                        <h3>Contacto</h3>
+                        <p class="madagascar-telefono">+34 647 382 917</p>
+                        <p class="madagascar-email">madagascar@tiendallaveros.com</p>
+                    </div>
+                    
+                    <div class="madagascar-card">
+                        <div class="madagascar-card-icon">𝜚</div>
+                        <h3>Horario</h3>
+                        <p class="madagascar-horario">Lunes a Viernes: 8:00 - 18:00</p>
+                        <p class="madagascar-horario">Sabados: 9:00 - 14:00</p>
+                        <p class="madagascar-horario madagascar-cerrado">Domingos: Cerrado</p>
+                    </div>
+                    
+                    <div class="madagascar-buttons">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Antananarivo+Madagascar" 
+                           target="_blank" class="madagascar-btn madagascar-btn-google">
+                            <span>𝜗</span> Ver en Google Maps
+                        </a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Antananarivo+Madagascar" 
+                           target="_blank" class="madagascar-btn madagascar-btn-directions">
+                            <span>𐙚</span> Como llegar
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Columna derecha contenedor del mapa interactivo -->
+                <div class="madagascar-map-container">
+                    <div id="madagascar-map" class="madagascar-map"></div>
+                    <div class="madagascar-map-caption">
+                        <span>𝜗𐙚 Capital de Madagascar</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="madagascar-footer">
+                <p>𝜗𝜚 Envios a toda la isla Distribucion nacional e internacional</p>
+            </div>
+        </div>
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- FIN SECCION DE GEOLOCALIZACION MADAGASCAR -->
+        <!-- ---------------------------------------------------------------------- -->
     </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/madagascar-map.js"></script>
 </body>
 
 </html>
